@@ -25,6 +25,13 @@ if (window.top !== window.self) {
                     }
                 }
             });
+            
+            document.addEventListener('click', function(event) {
+                const pixelPreview = document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-pixel-preview")[0].shadowRoot.children[0];
+                console.log('Pixel Preview -> ' + pixelPreview);
+                if (pixelPreview) pixelPreview.style.width = "50%";
+            });
+            
             return i;
         })())
  
