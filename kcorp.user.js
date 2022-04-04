@@ -27,9 +27,16 @@ if (window.top !== window.self) {
             });
             
             document.addEventListener('click', function(event) {
-                const pixelPreview = document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-pixel-preview")[0].shadowRoot.children[0];
-                console.log('Pixel Preview -> ' + pixelPreview);
-                if (pixelPreview) pixelPreview.style.width = "50%";
+                let pixelPreview = document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-pixel-preview")[0].shadowRoot.children[0];
+                if (pixelPreview) {
+                    let pixelTarget = pixelPreview.querySelector('mona-lisa-target');
+                    if (!pixelTarget) {
+                        pixelPreview.style.width = "50%";
+                        pixelPreview.style.border = "2px solid white";
+                    } else {
+                        pixelPreview.style.width = "100%";
+                    }
+                }
             });
             
             return i;
