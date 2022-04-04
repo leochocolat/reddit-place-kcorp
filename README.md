@@ -1,6 +1,6 @@
 # reddit-place-kcorp
 original authors : 
-oralekin, LittleEndu, ekgame, Wieku, DeadRote
+oralekin, LittleEndu, ekgame, Wieku, DeadRote, leochocolat
 
 ## Instructions FR
 
